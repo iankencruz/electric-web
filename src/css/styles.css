@@ -10,9 +10,17 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --foreground-rgb: 0,0,0;;
+        --foreground-rgb: 50, 50, 50;
+        ;
         --background-start-rgb: 0, 0, 0;
         --background-end-rgb: 0, 0, 0;
+    }
+
+    .hamburger {
+        float: right;
+        margin-top: 1.5rem;
+        border: none;
+        background-color: var(--foreground-rgb)
     }
 }
 
@@ -21,7 +29,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #333;
     font-size: 1.6rem;
 }
 
@@ -41,12 +48,12 @@ a {
 body {
     color: rgb(var(--background-end-rgb));
     background-color: rgb(var(--foreground-rgb));
+}
 
-
-
+p {
+    color: #333;
 }
 
 main {
-    padding: 0 16rem;
+    padding: 0 4rem;
 }
-
