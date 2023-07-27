@@ -1,8 +1,11 @@
 ---
-import HeaderCenter from "../components/HeaderCenter.astro";
+import ContentWithImage from "../components/ContentWithImage.astro";
+import Hero from "../components/Hero.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Electric">
-    <HeaderCenter />
+    <Hero alignment="right"/>
+    <ContentWithImage imgPos="left" imgsrc="src/images/hifive-illustration.png" />
+    <ContentWithImage imgPos="right" imgsrc="src/images/Screenshot 2023-06-21 160350.png" />
 </BaseLayout>

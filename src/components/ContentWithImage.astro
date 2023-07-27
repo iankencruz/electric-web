@@ -1,0 +1,124 @@
+---
+const {imgPos, imgsrc} = Astro.props
+
+let pos = imgPos
+
+if (imgPos === "left"){
+    pos = "order: -9999; padding-right: 8rem;"
+} else  {
+    pos = "order: 9999; padding-left: 8rem;"
+}
+---
+
+<div class="block">
+	<div class="header-content">
+		<div class="header-title"><h3>This is a Content w/ Image Component</h3></div>
+		<div class="header-body">
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor
+				sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Cum doloremque, repellat ducimus nisi quas
+				rem, eius natus earum eum pariatur, unde laudantium. Quae, voluptatem!
+				Vel, quas. Consequuntur cumque dignissimos molestias. Lorem ipsum dolor,
+				sit amet consectetur adipisicing elit. Laboriosam veniam alias soluta
+				totam saepe obcaecati dolores reprehenderit, dolorum voluptas sint iusto
+				expedita, debitis, tenetur in minima! Amet minus pariatur reprehenderit.
+			</p>
+		</div>
+	</div>
+	<div class="header-image" style=`${pos}`>
+		<img src={imgsrc} alt="img" width="500" height="300" />
+	</div>
+</div>
+
+<style>
+
+	.header-image {
+        flex-basis: 70%;
+	}
+
+	.header-image img {
+		width: 100%; /* you can use % */
+		height: auto;
+		object-fit: fill;
+        margin: auto;
+		
+	}
+
+	.header-content {
+		width: 100%;
+		margin: 4rem 0;
+        flex: 1 1 auto
+	}
+
+	.header-title h3 {
+		font-size: 5rem;
+	}
+
+	.header-body p {
+		margin: 8rem auto;
+	}
+
+	@media screen and (width < 640px) {
+		.header-content {
+			width: 100%;
+			margin: 2rem auto;
+			flex-grow: 1;
+			padding: 0 0;
+            
+		}
+
+		.header-title {
+			font-size: 3rem;
+		}
+
+		.header-body {
+			margin: 4rem auto;
+		}
+
+		.header-image {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+        .header-image img {
+			width: 100%; /* you can use % */
+			height: auto;
+			object-fit: fill;
+		}
+	}
+
+	@media (640px <= width <= 1024px) {
+		.header-content {
+			width: 100%;
+			margin: 2rem auto;
+			flex-grow: 1;
+			padding: 0 4rem;
+            
+		}
+
+		.header-title {
+			font-size: 4.25rem;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.header-body {
+			margin-top: 4rem;
+			margin-bottom: 6rem;
+		}
+
+		.header-image {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}		
+
+		.header-image img {
+			width: 100%; /* you can use % */
+			height: auto;
+			object-fit: fill;
+            padding: 0 4rem;
+			
+		}
+	}
+</style>

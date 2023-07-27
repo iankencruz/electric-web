@@ -1,4 +1,171 @@
 ---
 
+const {alignment} = Astro.props;
+let align = alignment;
+
+if (alignment === "left") {
+	align = "flex-direction: row; text-align: left";
+} else {
+	align = "flex-direction: row-reverse; text-align: right";
+}
 ---
 
+<div class="hero">
+	<!-- Titles -->
+	<div class="hero-content" style={align}>
+		<div class="hero-content-container">
+			<h1>Data to enrich your online business</h1>
+			<p>
+				Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+				cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+			</p>
+			<div class="btn">
+				<a class="btn-primary" href="#">Get started</a>
+				<a class="btn-secondary" href="#"
+					>Learn more <span aria-hidden="true">→</span></a
+				>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Buttons -->
+
+<style>
+	button {
+		text-decoration: none;
+		color: white;
+	}
+	.hero {
+		background-image: url("src/images/Paysorted-promo-clean.png");
+		width: 100%;
+		height: auto;
+		padding: 16rem 10rem;
+	}
+	.hero .bg-image img {
+		background-size: cover;
+		position: absolute;
+		width: 100%;
+		height: auto;
+	}
+
+	.hero-content {
+		padding: 150px 150px;
+		display: flex;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		padding: 0;
+
+	}
+
+	.hero-content-container {
+		width: 60%;
+	}
+
+	.hero-content-container h1 {
+		font-size: 4rem;
+		margin-bottom: 1.8rem;
+		color: #fff;
+	}
+	.hero-content-container p {
+		font-size: 2.4rem;
+		color: #bdbdbd;
+	}
+
+	.btn {
+		margin-top: 6rem;
+	}
+
+	.btn a {
+		padding: 1.6rem 3rem;
+	}
+
+	.btn-primary {
+		background-color: #3e7bff;
+		border-radius: 0.8rem;
+		color: #fff;
+		font-size: 1.8rem;
+		font-weight: 400;
+	}
+
+	.btn-primary:hover {
+		background-color: #6d9bff;
+		color: #fff;
+	}
+
+	.btn-secondary {
+		background: none;
+		border: 0;
+		color: #fff;
+	}
+
+	@media (640px <= width <= 1024px) {
+		.hero-content {
+			display: flex;
+			margin: auto;
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			padding: 0;
+			flex-direction: column !important;
+			text-align: center !important;
+		}
+
+		.hero {
+			padding: 16rem 10rem;
+		}
+
+		.hero-content-container {
+			width: 100%;
+			
+		}
+	}
+
+	@media screen and (width < 640px) {
+		.hero-content {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			padding: 0;
+
+			text-align: center;
+		}
+
+		.hero {
+			padding: 6rem 6rem;
+		}
+
+		.hero-content-container {
+			width: 100%;
+			margin-top: 4rem;
+			flex-direction: column !important;
+			text-align: center !important;
+		}
+		.hero-content-container h1 {
+			margin: 2rem 0;
+		}
+		.btn {
+			display: flex;
+			flex-direction: column;
+			margin-top: 3rem;
+		}
+		.btn a {
+			padding: 2rem 0;
+		}
+
+		.btn-secondary {
+			background-color: #90a3ca;
+			margin: 2rem 0;
+			border-radius: 0.8rem;
+		}
+	}
+</style>

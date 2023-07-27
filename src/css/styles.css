@@ -51,14 +51,19 @@ a {
 }
 
 
+a:hover {
+    text-decoration: none;
+}
+
+
+
+
 
 p {
     color: #333;
 }
 
-main {
-    padding: var(--mx-lg);
-}
+
 
 
 
@@ -144,14 +149,19 @@ main {
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 8rem auto;
+    padding: var(--mx-lg);
 }
+
 /* Size Variants */
 .block-sm {
     margin: 4rem auto;
+
 }
+
 .block-md {
     margin: 8rem auto;
 }
+
 .block-lg {
     margin: 16rem auto;
 }
@@ -169,22 +179,24 @@ main {
     .block {
         margin: 4rem auto;
         flex-direction: column;
+        padding: var(--mx-sm);
     }
+
     /* Size Variants */
     .block-sm {
         margin: 2rem auto;
     }
+
     .block-md {
         margin: 4rem auto;
     }
+
     .block-lg {
         margin: 8rem auto;
     }
 
 
-    main {
-        padding: var(--mx-sm)
-    }
+
 
     .nav-container {
         padding: var(--mx-sm);
@@ -196,7 +208,7 @@ main {
         align-items: center;
         margin: 2.25rem auto;
     }
-    
+
 
     .nav-menu {
         left: -100%;
@@ -243,28 +255,31 @@ main {
 
 
 /* MD - LG Resolution */
-@media  (640px <= width <= 1024px) {
+@media (640px <=width <=1024px) {
 
     .block {
         margin: 6rem auto;
+        flex-direction: column;
+        padding: var(--mx-md);
     }
+
     /* Size Variants */
     .block-sm {
         margin: 3rem auto;
     }
+
     .block-md {
         margin: 6rem auto;
     }
+
     .block-lg {
         margin: 12rem auto;
     }
 
 
 
-    main {
-        padding: var(--mx-md);
-    }
-    
+
+
 
     .nav-container {
         padding: var(--mx-md);
@@ -275,7 +290,7 @@ main {
         align-items: center;
         margin: 2.25rem auto;
     }
-    
+
 
     .nav-menu {
         left: -100%;
@@ -320,18 +335,16 @@ main {
 /* ********************************** */
 /* ******** MD - LG Resolution ****** */
 /* ********************************** */
-@media (1024px <= width <= 1536px) {
-    
-    
-    main {
-        padding: var(--mx-lg);
-    }
-    
+@media (1024px <=width <=1536px) {
 
-    
+
+
+
+
+
     .nav-container {
         padding: var(--mx-lg);
     }
-    
 
-}   
+
+}
