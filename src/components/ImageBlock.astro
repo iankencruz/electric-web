@@ -1,0 +1,51 @@
+---
+const { blocktype } = Astro.props;
+
+let type = blocktype;
+---
+
+{
+	blocktype === "banner" && (
+		<div class="image-block block">
+            <h1>1</h1>
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+		</div>
+	)
+}
+{
+	blocktype === "dual" && (
+		<div class="image-block block">
+            <h1>2</h1>
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+		</div>
+	)
+}
+{
+	blocktype === "multi" && (
+        
+		<div class="image-block block">
+            <h1>3</h1>
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+			<img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
+		</div>
+	)
+}
+
+<style>
+    .image-block {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 0%
+    }
+
+	.image-block img {
+		width: 100%;
+		height: 44rem;
+		object-fit: cover;
+		border-radius: 0.8rem;
+        margin: 0 0.4rem;
+	}
+</style>
