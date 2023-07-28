@@ -145,25 +145,38 @@ p {
 /* !! GLOBALS */
 /** Default */
 .block {
+    margin: 8rem auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 8rem auto;
     padding: var(--mx-lg);
 }
 
 /* Size Variants */
 .block-sm {
     margin: 4rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: var(--mx-lg);
+    width: 100%;
 
 }
 
 .block-md {
     margin: 8rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: var(--mx-md);
 }
 
 .block-lg {
     margin: 16rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: var(--mx-lg);
 }
 
 /* Active Link Color */
