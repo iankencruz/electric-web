@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <nav class="nav">
@@ -12,18 +13,18 @@
 			/>
 		</a>
 
-		<ul class="nav-menu">			
+		<ul class="nav-menu">
 			<li class="nav-item">
 				<a href="#" class="nav-link">About</a>
 			</li>
-            <li class="nav-item">
+			<li class="nav-item">
 				<a href="#" class="nav-link">Services</a>
 			</li>
 			<li class="nav-item">
 				<a href="#" class="nav-link">Contact</a>
 			</li>
 		</ul>
-        <a href="#" class="nav-cta">Get Started</a>
+		<a href="#" class="nav-cta">Get Started</a>
 		<div class="hamburger">
 			<span class="bar"></span>
 			<span class="bar"></span>
@@ -33,6 +34,9 @@
 </nav>
 
 <style>
+	/* ********************************** */
+	/* ************ Navbar ************** */
+	/* ********************************** */
 	.nav {
 		border-bottom: 1px solid #e2e8f0;
 	}
@@ -51,29 +55,15 @@
 		/* justify-content: space-between; */
 		align-items: center;
 		margin: 2.25rem auto;
-		padding: 0 16rem;
-	}
-
-	.hamburger {
-		display: none;
-	}
-
-	.bar {
-		display: block;
-		width: 25px;
-		height: 3px;
-		margin: 5px auto;
-		-webkit-transition: all 0.3s ease-in-out;
-		transition: all 0.3s ease-in-out;
-		background-color: #101010;
+		padding: var(--mx-lg);
 	}
 
 	.nav-menu {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-        margin-right: auto;
-        margin-left: auto;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	.nav-item {
@@ -90,23 +80,138 @@
 		color: #482ff7;
 	}
 
-    .nav-cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.8rem;
-        padding: 1.2rem 1.5rem;
-        color: #fff;
-        background-color: #482ff7;
-        border-radius: 0.75rem;
-        font-weight: 500;
-        
-    }
+	.nav-cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.8rem;
+		padding: 1.2rem 1.5rem;
+		color: #fff;
+		background-color: #482ff7;
+		border-radius: 0.75rem;
+		font-weight: 500;
+	}
 
+	.hamburger {
+		display: none;
+	}
 
+	.bar {
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		background-color: #101010;
+	}
 
+	/* ********************************** */
+	/* ******** MD - LG Resolution ****** */
+	/* ********************************** */
+	@media (1024px <=width <=1536px) {
+		.nav-container {
+			padding: var(--mx-lg);
+		}
+	}
+
+	/* MD - LG Resolution */
+
+	@media (640px <=width <=1024px) {
+		.nav-container {
+			padding: var(--mx-md);
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			/* justify-content: space-between; */
+			align-items: center;
+			margin: 2.25rem auto;
+		}
+
+		.nav-menu {
+			left: -100%;
+			position: fixed;
+			flex-direction: column;
+			top: 11rem;
+			background-color: #fff;
+			width: 100%;
+			padding-bottom: 100vh;
+			border-radius: 10px;
+			text-align: center;
+			transition: 0.3s;
+			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+		}
+
+		.nav-menu.active {
+			left: 0;
+		}
+
+		.nav-item {
+			margin: 2.5rem 0;
+		}
+
+		.nav-cta {
+			display: none;
+		}
+
+		.hamburger {
+			margin-left: auto;
+			margin-right: 3rem;
+			float: right;
+			justify-content: end;
+			display: block;
+			cursor: pointer;
+		}
+	}
+
+	/* SML  */
+	@media screen and (width < 640px) {
+		.nav-container {
+			padding: var(--mx-sm);
+
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			/* justify-content: space-between; */
+			align-items: center;
+			margin: 2.25rem auto;
+		}
+
+		.nav-menu {
+			left: -100%;
+			position: fixed;
+			flex-direction: column;
+			top: 11rem;
+			background-color: #fff;
+			width: 100%;
+			padding-bottom: 100vh;
+			border-radius: 10px;
+			text-align: center;
+			transition: 0.3s;
+			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+		}
+
+		.nav-menu.active {
+			left: 0;
+		}
+
+		.nav-item {
+			margin: 2.5rem 0;
+		}
+
+		.nav-cta {
+			display: none;
+		}
+
+		.hamburger {
+			margin-left: auto;
+			margin-right: 3rem;
+			float: right;
+			justify-content: end;
+			display: block;
+			cursor: pointer;
+		}
+	}
 </style>
 
-<script>
-
-</script>
+<script></script>
