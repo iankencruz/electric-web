@@ -61,6 +61,10 @@ p {
     color: #333;
 }
 
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
 
 
 

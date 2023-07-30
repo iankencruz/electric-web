@@ -1,0 +1,95 @@
+---
+---
+
+<div class="logo-cloud-block">
+  <h4 class="logo-cloud-header">Trusted by all the leading brands</h4>
+  <!-- Image Panel -->
+  <div class="image-panels">
+    <img
+      src="https://picsum.photos/id/1076/600/400"
+      alt=""
+      width="200"
+      height="150"
+    />
+    <img
+      src="https://picsum.photos/id/211/600/400"
+      alt=""
+      width="300"
+      height="150"
+    />
+    <img
+      src="https://picsum.photos/id/30/600/400"
+      alt=""
+      width="200"
+      height="150"
+    />
+    <img
+      src="https://picsum.photos/id/598/600/400"
+      alt=""
+      width="200"
+      height="150"
+    />
+    <img
+      src="https://picsum.photos/id/211/600/400"
+      alt=""
+      width="300"
+      height="150"
+    />
+  </div>
+</div>
+
+<style>
+  .logo-cloud-block {
+    margin: 8rem 16rem;
+  }
+
+  .logo-cloud-header {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .image-panels {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: 1rem;
+  }
+
+  .image-panels img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (640px <= width <= 1024px) {
+    .logo-cloud-block {
+      margin: 6rem auto;
+      padding: 0 12rem;
+    }
+    .image-panels img {
+        object-fit: fill;
+    }
+  }
+
+  @media screen and (width < 640px) {
+    .logo-cloud-block {
+      columns: 1;
+      margin: 4rem auto;
+      padding: 0 4rem;
+    }
+
+    .image-panels {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .image-panels img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+</style>
