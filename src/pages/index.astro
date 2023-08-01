@@ -1,4 +1,7 @@
 ---
+import CTA from "../components/CTA.astro";
+import Content from "../components/Content.astro";
+import ContentTwoCols from "../components/ContentTwoCols.astro";
 import ContentWithImage from "../components/ContentWithImage.astro";
 import FeaturesThree from "../components/FeaturesThree.astro";
 import Hero from "../components/Hero.astro";
@@ -9,10 +12,50 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Electric">
-    <Hero alignment="left"/>
-    <LogoCloud />
-    <FeaturesThree />
-    <ContentWithImage imgPos="left" imgsrc="src/images/hifive-illustration.png" />
-    <ContentWithImage imgPos="right" imgsrc="src/images/Screenshot 2023-06-21 160350.png" />
-    <ImageBlock blocktype="banner"/>
+	<Hero alignment="left" />
+    <FeaturesThree
+    title="Our Services"
+    subheading="Canberra Electrical Services is equipped to offer a range of electrical installations including:"
+    f1="Project Air Conditioning"
+    f2="Project Electrical"
+    f3="General Electrical"
+	/>
+	<ContentWithImage
+		imgPos="left"
+		imgsrc="public/images/electrician-02.webp"
+		title="You're Trusted Electrical Solution"
+		content=" At Canberra Electrical Solutions, we are your reliable and innovative partner for all your electrical needs in the vibrant city of Canberra. With a deep-rooted commitment to excellence and customer satisfaction, our company has been proudly serving the Canberra community for over a decade."
+	/>
+	
+    
+    
+	<ImageBlock blocktype="banner" imgsrc="public/images/canberra-01.webp" />
+	<LogoCloud />
+	<Content
+    imgPos="right"
+    imgsrc="public/images/electrician-01.webp"
+    title="Commercial & Residential"
+    content="At Canberra Electric Solutions, we are your trusted and experienced electrical partner, catering to both commercial and residential clients throughout the beautiful city of Canberra. With a passion for excellence and a track record of delivering top-notch electrical solutions, we have become a go-to choice for businesses and homeowners alike."
+	/>
+    
+	<ContentTwoCols 
+    title="What sets us apart"
+    
+    content="We take pride in our reputation for reliability, punctuality, and transparent communication. Our friendly team is always ready to listen to your needs, offer expert advice, and provide cost-effective solutions. We believe in building strong and lasting relationships with our clients, and it reflects in the numerous repeat customers and referrals we receive."
+    
+    content2="We take pride in our reputation for reliability, punctuality, and transparent communication. Our friendly team is always ready to listen to your needs, offer expert advice, and provide cost-effective solutions. We believe in building strong and lasting relationships with our clients, and it reflects in the numerous repeat customers and referrals we receive."
+    />
+    
+	<ContentWithImage
+		imgPos="left"
+		imgsrc="public/images/electrician-04.webp"
+		title="Expertise and Innovation:"
+		content="With years of experience in the industry, our electricians are well-equipped to handle any electrical challenge. We stay ahead of the curve by embracing the latest technological advancements and industry best practices. Our commitment to continuous learning and professional development ensures that we deliver cutting-edge solutions that exceed your expectations."
+	/>
+    
+    
+    <CTA 
+    title="Boost your productivity. Start using our app today."
+        content="Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea."
+    />
 </BaseLayout>

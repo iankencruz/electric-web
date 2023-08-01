@@ -4,26 +4,27 @@
 
 <nav class="nav">
 	<div class="nav-container" id="myTopNav">
-		<a href="" class="nav-logo">
+		<a href="/" class="nav-logo">
 			<img
-				src="src/images/Paysorted_logo_400x120_xero_invoices.jpg"
+				src="public/images/icons/Logo.webp"
 				alt="image alt"
 				width="200"
-				height="60"
+				height="90"
 			/>
 		</a>
 
 		<ul class="nav-menu">
 			<li class="nav-item">
-				<a href="#" class="nav-link">About</a>
+				<a href="/about" class="nav-link">About</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link">Services</a>
+				<a href="services" class="nav-link">Services</a>
 			</li>
 			<li class="nav-item">
-				<a href="#" class="nav-link">Contact</a>
+				<a href="contact" class="nav-link">Contact</a>
 			</li>
 		</ul>
+		<!-- TODO Fix Navbar for astro -->
 		<a href="#" class="nav-cta">Get Started</a>
 		<div class="hamburger">
 			<span class="bar"></span>
@@ -32,6 +33,18 @@
 		</div>
 	</div>
 </nav>
+
+<script>
+	/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+const hamburger = document.querySelector('.hamburger');
+const navLink = document.querySelector('.nav__link');
+
+hamburger.addEventListener('click', () => {
+  navLink.classList.toggle('hide');
+});
+
+</script>
 
 <style>
 	/* ********************************** */

@@ -1,0 +1,84 @@
+---
+const { title, content } = Astro.props;
+---
+
+<div class="cta-block">
+	<div class="header-content">
+		<div class="header-title"><h3>{title}</h3></div>
+		<div class="header-body">
+			<p>
+				{content}
+			</p>
+		</div>
+		<div class="btn">
+			<a class="btn-primary" href="#">Get A Quote</a>
+			<a class="btn-secondary" href="#"
+				>Learn more <span aria-hidden="true">→</span></a
+			>
+		</div>
+	</div>
+</div>
+
+<style>
+	.cta-block {
+		display: flex;
+		height: 44rem;
+		background-color: #152c5f;
+	}
+	.header-content {
+		margin: 0 auto;
+		margin-top: 8rem;
+		text-align: center;
+        padding: 0 8rem;
+	}
+
+	.header-content h3 {
+		font-size: 4rem;
+		margin: 4rem;
+		color: #fff;
+	}
+
+	.header-content p {
+		color: #fff;
+	}
+
+	.btn {
+		margin-top: 6rem;
+	}
+
+	.btn a {
+		padding: 1.6rem 3rem;
+	}
+
+	.btn-primary {
+		background-color: #3e7bff;
+		border-radius: 0.8rem;
+		color: #fff;
+		font-size: 1.8rem;
+		font-weight: 400;
+	}
+
+	.btn-primary:hover {
+		background-color: #6d9bff;
+		color: #fff;
+	}
+
+	.btn-secondary {
+		background: ;
+		border: 0;
+		color: #ffffff;
+	}
+
+	@media screen and (width < 800px) {
+		.cta-block {
+			flex-direction: column;
+			height: 54rem;
+			background-color: #152c5f;
+		}
+		.header-content {
+			margin-top: 0rem;
+			padding: 0 4rem;
+		}
+	}
+
+</style>

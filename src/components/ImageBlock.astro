@@ -1,5 +1,5 @@
 ---
-const { blocktype } = Astro.props;
+const { blocktype, imgsrc, imgsrc2} = Astro.props;
 
 let type = blocktype;
 ---
@@ -7,15 +7,15 @@ let type = blocktype;
 <div class="image-block block">
 {
   blocktype === "banner" && (
-    <img src="https://picsum.photos/id/655/600/400" alt="vehicle" />
+    <img src={imgsrc} alt="vehicle" />
   )
 }
 
 {
   blocktype === "dual" && (
     <div class="grid">
-      <img src="https://picsum.photos/id/1020/600/400" alt="sadf" />
-      <img src="https://picsum.photos/id/1025/600/400" alt="adorable dog" />
+      <img src={imgsrc} alt="sadf" />
+      <img src={imgsrc2} alt="adorable dog" />
     </div>
   )
 }
@@ -25,6 +25,8 @@ let type = blocktype;
 <!-- Have to make the multi image layout seperate -->
 
 <style>
+  /* ********************* */
+  /* ******Image Block**** */
   .image-block img {
     width: 100%;
     height: 36rem;

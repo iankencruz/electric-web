@@ -1,13 +1,5 @@
 ---
-const {imgPos, imgsrc, content, title} = Astro.props
-
-let pos = imgPos
-
-if (imgPos === "left"){
-    pos = "order: -9999; padding-right: 8rem;"
-} else  {
-    pos = "order: 9999; padding-left: 8rem;"
-}
+const { content, content2, title } = Astro.props;
 ---
 
 <div class="block">
@@ -17,41 +9,31 @@ if (imgPos === "left"){
 			<p>
 				{content}
 			</p>
+			<p>
+				{content2}
+			</p>
 		</div>
-	</div>
-	<div class="header-image" style=`${pos}`>
-		<img src={imgsrc} alt="img" width="300" height="500" />
 	</div>
 </div>
 
 <style>
-
-	.header-image {
-        flex-basis: 60%;
-		margin-top: auto;
-		margin-bottom: auto;
-	}
-
-	.header-image img {
-		width: 100%; /* you can use % */
-		height: auto;
-		object-fit: fill;
-        margin: auto;
-		
-	}
-
 	.header-content {
 		width: 100%;
 		margin: 4rem 0;
-        flex: 1 1 auto
+		flex: 1 1 auto;
 	}
 
 	.header-title h3 {
 		font-size: 5rem;
 	}
 
+	.header-body {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 	.header-body p {
-		margin: 4rem auto;
+		margin: 2rem 0;
+		padding-right: 8rem;
 	}
 
 	@media screen and (width < 640px) {
@@ -60,15 +42,18 @@ if (imgPos === "left"){
 			margin: 2rem auto;
 			flex-grow: 1;
 			padding: 0 0;
-            
 		}
 
 		.header-title {
 			font-size: 3rem;
+			text-align: center;
 		}
 
 		.header-body {
-			margin: 4rem auto;
+			margin-top: 2rem;
+			text-align: center;
+			display: block;
+			columns: 1;
 		}
 
 		.header-image {
@@ -76,7 +61,7 @@ if (imgPos === "left"){
 			padding-right: 0 !important;
 		}
 
-        .header-image img {
+		.header-image img {
 			width: 100%; /* you can use % */
 			height: auto;
 			object-fit: fill;
@@ -89,7 +74,6 @@ if (imgPos === "left"){
 			margin: 2rem auto;
 			flex-grow: 1;
 			padding: 0 4rem;
-            
 		}
 
 		.header-title {
@@ -101,19 +85,6 @@ if (imgPos === "left"){
 		.header-body {
 			margin-top: 4rem;
 			margin-bottom: 6rem;
-		}
-
-		.header-image {
-			padding-left: 0 !important;
-			padding-right: 0 !important;
-		}		
-
-		.header-image img {
-			width: 100%; /* you can use % */
-			height: auto;
-			object-fit: fill;
-            padding: 0 4rem;
-			
 		}
 	}
 </style>
