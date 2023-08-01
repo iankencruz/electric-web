@@ -1,5 +1,5 @@
 ---
-const {imgPos, imgsrc, content, title} = Astro.props
+const {imgPos, imgsrc, content, content2, title} = Astro.props
 
 let pos = imgPos
 
@@ -10,16 +10,22 @@ if (imgPos === "left"){
 }
 ---
 
-<div class="block">
-	<div class="header-content">
+<div class="block flex ">
+	<div class="header-content w-full my-4 flex-auto">
 		<div class="header-title"><h3>{title}</h3></div>
 		<div class="header-body">
 			<p>
 				{content}
 			</p>
+			{
+				content2 &&
+				(
+					<p>{content2}</p>
+				)
+			}
 		</div>
 	</div>
-	<div class="header-image" style=`${pos}`>
+	<div class="header-image  basis-3/5" style=`${pos}`>
 		<img src={imgsrc} alt="img" width="300" height="500" />
 	</div>
 </div>

@@ -35,6 +35,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 1.6rem;
+    
 }
 
 html {
@@ -58,7 +59,7 @@ a:hover {
 
 
 p {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #333;
 }
 

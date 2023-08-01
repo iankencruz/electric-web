@@ -1,5 +1,5 @@
 ---
-
+let isMobile = false;
 ---
 
 <nav class="nav">
@@ -35,15 +35,23 @@
 </nav>
 
 <script>
-	/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-const hamburger = document.querySelector('.hamburger');
-const navLink = document.querySelector('.nav__link');
 
-hamburger.addEventListener('click', () => {
-  navLink.classList.toggle('hide');
-});
+	//
 
+	const buttons = document.querySelectorAll("div.hamburger");
+
+	// Handle clicks on each button.
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			alert("Button was clicked!");
+			var x = document.getElementById("myTopNav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		});
+	});
 </script>
 
 <style>

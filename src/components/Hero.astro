@@ -1,6 +1,6 @@
 ---
 
-const {alignment} = Astro.props;
+const {alignment, src} = Astro.props;
 let align = alignment;
 
 if (alignment === "left") {
@@ -10,7 +10,7 @@ if (alignment === "left") {
 }
 ---
 
-<div class="hero">
+<div class="hero" style=`background-image: url(${src});`>
 	<!-- Titles -->
 	<div class="hero-content" style={align}>
 		<div class="hero-content-container">
@@ -37,7 +37,8 @@ if (alignment === "left") {
 		color: white;
 	}
 	.hero {
-		background-image: url("/images/CBRElectric-Hero.webp");
+		z-index: 2;
+		
 		width: 100%;
 		height: auto;
 		padding: 16rem 10rem;
