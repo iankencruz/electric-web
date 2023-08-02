@@ -32,15 +32,14 @@
 
 <nav>
 	<a href="/" class="nav-logo">
-        <img
-            src="/images/icons/Logo.webp"
-            alt="image alt"
-            width="230"
-            height="90"
-        />
-    </a>
+		<img
+			src="/images/icons/Logo.webp"
+			alt="image alt"
+			width="230"
+			height="90"
+		/>
+	</a>
 	<div class="inner">
-        
 		<div
 			on:click={handleMobileIconClick}
 			class={`mobile-icon${showMobileMenu ? " active" : ""}`}
@@ -55,6 +54,7 @@
 			{/each}
 		</ul>
 	</div>
+	<a href="/contact" class="nav-cta">Get Started</a>
 </nav>
 
 <style>
@@ -72,9 +72,9 @@
 		padding: 1rem 4rem;
 	}
 
-    .active {
-        color: blue;
-    }
+	.active {
+		color: blue;
+	}
 
 	.inner {
 		max-width: 980px;
@@ -147,9 +147,13 @@
 		transform: rotate(45deg);
 	}
 
-    .nav-logo {
+    .nav-cta {
         display: none;
     }
+
+	.nav-logo {
+		display: none;
+	}
 	.navbar-list {
 		display: none;
 		width: 100%;
@@ -163,7 +167,7 @@
 		background-color: #272727;
 		position: fixed;
 		display: block;
-        padding-top: 4rem;
+		padding-top: 4rem;
 		height: calc(100% - 45px);
 		bottom: 0;
 		left: 0;
@@ -174,7 +178,7 @@
 		list-style-type: none;
 		position: relative;
 		z-index: 999;
-        margin: 0 4rem;
+		margin: 0 4rem;
 	}
 
 	.navbar-list li:before {
@@ -194,24 +198,37 @@
 		display: flex;
 		height: 45px;
 		align-items: center;
-		padding: 0 10px;
-		font-size: 13px;
+		padding: 6rem 10px;
+		font-size: 2.2rem;
 	}
 
 	@media screen and (min-width: 1000px) {
-        nav {
-            height: 12rem;
-            padding: 0 16rem;
-        }
+		nav {
+			height: 12rem;
+			padding: 0 16rem;
+		}
 
-        .inner {
-            
-            padding: 0 16rem;
-        }
+		.nav-cta {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2.2rem;
+			padding: 1.2rem 1.5rem;
+			color: #fff;
+			background-color: #008C04;
+			border-radius: 0.8rem;
+			font-weight: 500;
+		}
 
-        .nav-logo {
-            display: flex;
-        }
+		.inner {
+			justify-content: end;
+			margin: auto;
+			/* padding: 0 44rem; */
+		}
+
+		.nav-logo {
+			display: flex;
+		}
 		.mobile-icon {
 			display: none;
 		}
