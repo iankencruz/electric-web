@@ -37,8 +37,7 @@ if (alignment === "left") {
 		color: white;
 	}
 	.hero {
-		z-index: 2;
-		
+		z-index: 50;
 		width: 100%;
 		height: auto;
 		padding: 16rem 10rem;
@@ -49,6 +48,7 @@ if (alignment === "left") {
 		position: absolute;
 		width: 100%;
 		height: auto;
+		z-index: 10;
 	}
 
 	.hero-content {
@@ -59,16 +59,19 @@ if (alignment === "left") {
 		right: 0;
 		width: 100%;
 
+		z-index: 10;
 	}
 
 	.hero-content-container {
 		width: 60%;
+		z-index: 10;
 	}
 
 	.hero-content-container h1 {
 		font-size: 4rem;
 		margin-bottom: 1.8rem;
 		color: #fff;
+		z-index: 10;
 	}
 	.hero-content-container p {
 		font-size: 2.4rem;
@@ -119,15 +122,17 @@ if (alignment === "left") {
 			padding: 0;
 			flex-direction: column !important;
 			text-align: center !important;
+			z-index: 10;
 		}
 
 		.hero {
 			padding: 16rem 10rem;
+			z-index: 10;
 		}
 
 		.hero-content-container {
 			width: 100%;
-			
+			z-index: 10;
 		}
 	}
 
@@ -142,12 +147,13 @@ if (alignment === "left") {
 			right: 0;
 			width: 100%;
 			padding: 0;
-
+			z-index: 10;
 			text-align: center;
 		}
 
 		.hero {
 			padding: 6rem 6rem;
+			z-index: 10;
 		}
 
 		.hero-content-container {
@@ -155,9 +161,11 @@ if (alignment === "left") {
 			margin-top: 4rem;
 			flex-direction: column !important;
 			text-align: center !important;
+			z-index: 10;
 		}
 		.hero-content-container h1 {
 			margin: 2rem 0;
+			z-index: 10;
 		}
 		.btn {
 			display: flex;
