@@ -1,0 +1,171 @@
+---
+const {imgPos, imgsrc, content, items, title} = Astro.props
+
+let pos = imgPos
+
+if (imgPos === "left"){
+    pos = "order: -9999; padding-right: 8rem;"
+} else  {
+    pos = "order: 9999; padding-left: 8rem;"
+}
+
+
+
+---
+
+<div class="block">
+	<div class="header-content">
+		<div class="header-title"><h3>{title}</h3></div>
+		<div class="header-body">
+			<p>
+				{content}
+			</p>
+
+            <div class="content-features">
+                <ul>
+                    {
+                        items.map((item) =>
+                        <div class="service-list">
+                            <li>
+                               <p>
+                                <i>
+                                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#379D3D"><path d="M7 12.5l3 3 7-7" stroke="#379D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#379D3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                </i> 
+                                {item}
+                                </p>
+                            </li>
+                        </div>
+                    )
+                    }
+                </ul>
+            </div>
+		</div>
+	</div>
+	<div class="header-image" style=`${pos}`>
+		<img src={imgsrc} alt="img" width="500" height="500" />
+	</div>
+</div>
+
+
+
+
+<style>
+      .header-image {
+        flex-basis: 60%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.header-image img {
+		width: 100%; /* you can use % */
+		height: auto;
+		object-fit: fill;
+        margin: auto;
+		border-radius: 0.8rem;
+		
+	}
+
+	.header-content {
+		width: 100%;
+		margin: 4rem 0;
+        flex: 1 1 auto
+	}
+
+	.header-title h3 {
+		font-size: 5rem;
+	}
+
+	.header-body p {
+		margin: 4rem auto;
+	}
+
+    .content-features {
+        display: block;
+        columns: 2;
+    }
+
+    .service-list i{
+        margin-right: 2rem;        
+        vertical-align: middle;
+    }
+    .service-list p{
+        margin: 0.5rem 0;
+        margin-right: 2rem;
+        vertical-align: middle;
+        font-size: 1.6rem;
+    }
+
+    
+
+	@media screen and (width < 840px) {
+		.header-content {
+			width: 100%;
+			margin: 2rem auto;
+			flex-grow: 1;
+			padding: 0 0;
+            vertical-align: text-top;
+            
+		}
+
+		.header-title {
+			font-size: 3rem;
+		}
+
+		.header-body {
+			margin: 4rem auto;
+		}
+
+		.header-image {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+        .header-image img {
+			width: 100%; /* you can use % */
+			height: auto;
+			object-fit: fill;
+		}
+
+        .content-features{
+            columns: 1;
+        }
+	}
+
+	@media (840px <= width <= 1024px) {
+		.header-content {
+			width: 100%;
+			margin: 2rem auto;
+			flex-grow: 1;
+			padding: 0 4rem;
+            
+		}
+
+		.header-title {
+			font-size: 4.25rem;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.header-body {
+			margin-top: 4rem;
+			margin-bottom: 6rem;
+		}
+
+		.header-image {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}		
+
+		.header-image img {
+			width: 100%; /* you can use % */
+			height: auto;
+			object-fit: fill;
+            padding: 0 4rem;
+			
+		}
+
+        .content-features{
+            columns: 2;
+        }
+	}
+</style>

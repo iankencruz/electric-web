@@ -6,9 +6,9 @@ let isMobile = false;
 	<div class="nav-container" id="myTopNav">
 		<a href="/" class="nav-logo">
 			<img
-				src="public/images/icons/Logo.webp"
+				src="/images/icons/Logo.webp"
 				alt="image alt"
-				width="200"
+				width="230"
 				height="90"
 			/>
 		</a>
@@ -25,7 +25,7 @@ let isMobile = false;
 			</li>
 		</ul>
 		<!-- TODO Fix Navbar for astro -->
-		<a href="#" class="nav-cta">Get Started</a>
+		<a href="/contact" class="nav-cta">Get Started</a>
 		<div class="hamburger">
 			<span class="bar"></span>
 			<span class="bar"></span>
@@ -59,15 +59,10 @@ let isMobile = false;
 	/* ************ Navbar ************** */
 	/* ********************************** */
 	.nav {
-		border-bottom: 1px solid #e2e8f0;
+		border-bottom: 1px solid #272727;
 	}
 
-	.navbar {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1rem 1.5rem;
-	}
+
 
 	.nav-container {
 		width: 100%;
@@ -75,8 +70,10 @@ let isMobile = false;
 		flex-wrap: wrap;
 		/* justify-content: space-between; */
 		align-items: center;
-		margin: 2.25rem auto;
-		padding: var(--mx-lg);
+		margin: 0 auto;
+		padding: 1rem 16rem;
+		
+		background-color: #272727;
 	}
 
 	.nav-menu {
@@ -94,7 +91,7 @@ let isMobile = false;
 	.nav-link {
 		font-size: 1.8rem;
 		font-weight: 400;
-		color: #475569;
+		color: #fff;
 	}
 
 	.nav-link:hover {
@@ -133,6 +130,7 @@ let isMobile = false;
 	@media (1024px <=width <=1536px) {
 		.nav-container {
 			padding: var(--mx-lg);
+			background-color: #c2c2c2;
 		}
 	}
 
@@ -146,7 +144,9 @@ let isMobile = false;
 			flex-wrap: wrap;
 			/* justify-content: space-between; */
 			align-items: center;
-			margin: 2.25rem auto;
+			padding: 1rem 4rem;
+			margin: 0 auto;
+			background-color: #c2c2c2;
 		}
 
 		.nav-menu {
@@ -161,6 +161,7 @@ let isMobile = false;
 			text-align: center;
 			transition: 0.3s;
 			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+			
 		}
 
 		.nav-menu.active {
@@ -195,7 +196,9 @@ let isMobile = false;
 			flex-wrap: wrap;
 			/* justify-content: space-between; */
 			align-items: center;
-			margin: 2.25rem auto;
+			padding: 1rem 4rem;
+			margin: 0 auto;
+			background-color: #c2c2c2;
 		}
 
 		.nav-menu {

@@ -7,7 +7,16 @@ const currYear = new Date().getFullYear();
 <div class="footer">
 	<div class="footer-main">
 		<div class="footer-company-details">
-			<div class="footer-logo">[Logo]</div>
+			<div class="footer-logo">
+				<a href="/" class="nav-logo">
+					<img
+						src="/images/icons/Logo.webp"
+						alt="image alt"
+						width="230"
+						height="90"
+					/>
+				</a>
+			</div>
 
 			<div class="footer-business-details">
 				<p><strong><span>ABN: <br></span></strong> 97 640 730 883</p>
@@ -45,7 +54,7 @@ const currYear = new Date().getFullYear();
 	.footer-main {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-		background-color: rgb(249, 249, 249);
+		background-color: #272727;
 		height: auto;
 		margin: 0 auto;
 		padding: 8rem 16rem;
@@ -57,20 +66,23 @@ const currYear = new Date().getFullYear();
 
 	.footer-business-details {
 		padding: 2rem 0rem;
+		color: #fff;
 	}
 	.footer-business-details span {
 		font-size: 1.4rem;
 	}
 	.footer-business-details p {
 		padding: 1rem 0rem;
-		
+		color: #fff;
 		font-size: 1.8rem;
+		color: #fff;
 	}
 
 	.footer-contact {
 		text-align: left;
 		margin: 0;
 		padding: 0;
+		color: #fff;
 	}
 
 	.footer-contact li {
@@ -84,6 +96,7 @@ const currYear = new Date().getFullYear();
 		padding: 0 8rem;
 		grid-column-start: 3;
 		grid-column-end: 4;
+		color: #fff;
 	}
 
 	.footer-nav li {
@@ -93,7 +106,7 @@ const currYear = new Date().getFullYear();
 	.footer-secondary {
 		display: flex;
 		height: 8rem;
-		background-color: rgb(215, 215, 215);
+		background-color: #858585;
 		margin: auto;
 	}
 
@@ -102,6 +115,7 @@ const currYear = new Date().getFullYear();
 		text-align: center;
 		align-items: center;
 		font-size: 1.8rem;
+		color: #dddddd;
 	}
 
 	.social-links {

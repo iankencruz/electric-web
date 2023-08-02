@@ -2,38 +2,81 @@
 import CTA from "../components/CTA.astro";
 import ContentWithImage from "../components/ContentWithImage.astro";
 import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 ---
 
-
-
-
 <BaseLayout>
-    <Hero alignment="left" src="/images/CBRElectric-Hero.webp"/> 
-    <ContentWithImage
-        imgPos="right"
-        imgsrc
-        title
-        content
-        content2
-    />
-    <ContentWithImage
-        imgPos="left"
-        imgsrc
-        title
-        content
-        content2
-    />
-    <ContentWithImage
-        imgPos="right"
-        imgsrc
-        title
-        content
-        content2
-    />
-    <CTA 
-    title="Boost your productivity. Start using our app today."
-        content="Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea."
-        />
+	<Hero alignment="left" src="/images/CBRElectric-Hero-03.webp" />
+	<Services
+		title="Residential"
+		content="Specialising in residential electrical works, including but not limited to new homes, knock down rebuilds, major renovations, LED downlight installations, powerpoint installations and more."
+		items={[
+			"Appliance repair + installation",
+			"Data Cabling",
+			"CCTV camera installation",
+			"Data outlet installation",
+			"Lighting repair",
+			"Lighting Installation",
+			"Electrical maintenance",
+			"Emergency call outs",
+			"Ceiling fan installation",
+			"Heating and cooling",
+			"Air conditioner installation",
+			"General electrical inspections",
+			"Video intercom systems",
+			"Lighting repair + installation",
+		]}
+		imgsrc="/images/electrician-03.webp"
+	/>
+	<Services
+		imgPos="left"
+		title="Commercial"
+		content="We specialise in all commercial electrical works, including but not limited to electrical maintenance and repair, finding electrical fault, office fitouts, shop fitouts, commercial fitouts and more."
+		items={[
+			"Appliance repair + installation",
+			"Data Cabling",
+			"CCTV camera installation",
+			"Data outlet installation",
+			"Lighting repair",
+			"Lighting Installation",
+			"Electrical maintenance",
+			"Emergency call outs",
+			"Ceiling fan installation",
+			"Heating and cooling",
+			"Air conditioner installation",
+			"Sensor light installation",
+			"Switchboard upgrades",
+			"General electrical inspections",
+			"Lighting repair + installation",
+			"Smoke alarm inspections",
+			"Smoke alarm installation",
+			"Video intercom systems",
+			"Office fitouts",
+			"Shop fitouts",
+			"Commercial fitouts",
+			"Commercial fitouts",
+		]}
+		imgsrc="/images/electrician-07.webp"
+	/>
+
+	<Services
+		imgPos="right"
+		title="Heating & Cooling"
+		content="we offer comprehensive heating and cooling services to keep your home or business comfortable all year round. Our team of skilled technicians is equipped to handle installation, repair, and maintenance of HVAC systems, including air conditioners, heaters, furnaces, and heat pumps. With a focus on energy efficiency and reliable performance, we strive to optimize your indoor climate while ensuring cost-effective solutions"
+		items={[
+			"HVAC Installation",
+			"HVAC Repair",
+			"HVAC Maintenance",
+			"Air Conditioning Service",
+			"Heating Service",
+			"Duct Cleaning",
+			"Thermostat Install & Calibration",
+			"Indoor Air Quality (IAQ) Solutions",
+			"Energy Efficiency Assessments",
+			"Emergency Services",
+		]}
+		imgsrc="/images/electrician-06.webp"
+	/>
+	<CTA title="Book your quote today!" content="" />
 </BaseLayout>
